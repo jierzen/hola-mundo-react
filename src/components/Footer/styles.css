@@ -1,0 +1,13 @@
+.my-footer{
+    border: 1px solid black;
+    bottom: 0;
+    left: 0;
+}
+
+.my-footer .my-nav{
+    background-color: tomato;
+}
+
+.my-footer .my-nav ul{
+    flex-direction: column;
+}
