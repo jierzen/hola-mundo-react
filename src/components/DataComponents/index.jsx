@@ -1,10 +1,15 @@
-//Links del Navbar
+//Links del Navbar con dropdown
 export const linkData = [
-{name:'Inicio', url:'/'},
-{name:'Acerca de', url:'/about'},
-{name:'Contacto', url:'/contact'},
-{name:'FAQ', url:'/faq'}
-]
+    { name: 'Inicio', url: '/' },
+    { name: 'Acerca de', url: '/about' },
+    { name: 'Servicios', url: '/services', dropdown: [
+        { name: 'Consultoría', url: '/services/consulting' },
+        { name: 'Desarrollo', url: '/services/development' }
+        //agregar aca mas links para el dropdown
+    ]},
+    { name: 'Contacto', url: '/contact' },
+    { name: 'FAQ', url: '/faq' }
+];
 
 //Fecha de hoy
 const weekday = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
@@ -76,3 +81,17 @@ export const userSession = {
     name: 'Jorge Espinoza',
     email: 'jorge.esp.ram@example.com'
 };
+
+export const formDataExample = {
+    button:["Guardar","/save"],
+    formTitle:"Titulo de Ejemplo",
+    form:
+    [
+        {element:'input', type:'text', required:false, placeholder:'ingrese su nombre'},
+        {element:'input', type:'number', required:false, placeholder:'ingrese su edad'},
+        {element:'input', type:'text', required:false, placeholder:'ingrese su correo'},
+        {element:'datepicker', required:false, placeholder:'ingrese la fecha'},
+        {element:'selector', required:false, placeholder:'ingrese su pais', values:[["Chile",0],["Peru",1],["Argentina",2]]},
+        {element:'checkbox', required:true, placeholder:'esta de acuerdo con las normas?'}
+    ]
+}

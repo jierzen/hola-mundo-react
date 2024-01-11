@@ -1,5 +1,5 @@
 import './App.css'
-import { linkData, currentDate, cardData, alertData, buttonData, tableData, modalWarningData, modalPrimaryData, userSession } from './components/DataComponents';
+import { linkData, currentDate, cardData, alertData, buttonData, tableData, modalWarningData, modalPrimaryData, userSession, formDataExample } from './components/DataComponents';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
 import Header from './components/Header'
@@ -12,6 +12,7 @@ import Table from './components/Table'
 import Modal from './components/Modal'
 import Calculadora from './components/Calculadora'
 import UserProfile from './components/UserProfile'
+import Form from './components/Form'
 
 function App(){
   const [showModalWarning, setShowModalWarning] = useState(false);
@@ -32,6 +33,11 @@ function App(){
       <Row>
         <Col>
         <Header currentDate={currentDate}/>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Form formDataIn={formDataExample}/>
         </Col>
       </Row>
       {
